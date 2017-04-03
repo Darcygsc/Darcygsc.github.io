@@ -7,6 +7,12 @@ author:     "Chaos"
 header-img: "img/post-sad.jpg"
 tags:
     - IOS
+image:
+  feature: 
+  teaser: 03173_goodmorning2013_2880x1800.jpg
+  credit: Death to Stock Photo
+  creditlink: ""
+
 ---
 **当并行执行的处理更新数据时，很容易产生数据不一致的情况，有时还会出现程序crash的情况，怎样避免这种情况的产生？我们需要更细粒度的排他控制。**
 

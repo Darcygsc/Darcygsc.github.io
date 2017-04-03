@@ -7,6 +7,12 @@ author:     "Chaos"
 header-img: "img/post-sad.jpg"
 tags:
     - IOS
+image:
+  feature: 
+  teaser: 03234_lagoadajansen_2880x1800.jpg
+  credit: Death to Stock Photo
+  creditlink: ""
+
 ---
 **方形显得过于棱角分明，给用户带来的感觉冷淡不够友好，所以很多图片的展示往往倾向于采用圆角：不管是iPhone上的圆角矩形应用图标，还是QQ上的圆角用户头像。**
 

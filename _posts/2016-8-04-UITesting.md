@@ -7,6 +7,12 @@ author:     "Chaos"
 header-img: "img/post-sad.jpg"
 tags:
     - IOS
+image:
+  feature: 
+  teaser: london_night_5-wallpaper-5120x3200.jpg
+  credit: Death to Stock Photo
+  creditlink: ""
+
 ---
 **软件开发过程中，不可避免的一个环节就是测试。在iOS开发中，UI测试更是重要且必要。如何快速且高效的完成UI测试，是我们需要思考的一个问题。**
 
