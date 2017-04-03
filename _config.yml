@@ -1,0 +1,30 @@
+# Site Settings
+title:               Mr Darcy
+tagline:             思考、前行
+description:
+baseurl:            #"/Lagrange"
+url:                #"https://lenpaul.github.io"
+github:
+  url:               #"https://lenpaul.github.io/Lagrange"
+author:
+  name:              "Mr Darcy"
+  email:             "chaosgsc@gmail.com"
+  twitter:           "Ssss74642806"
+  instagram:         "acehhhhty"
+  github:            "Darcygsc"
+  facebook:          ""
+  linkedin:          ""
+navigation:
+- title: About
+  url: /about
+- title: Writing
+  url: /writing
+
+paginate:            5
+disqus:              #"your-disqus"
+
+# Build settings
+markdown:            kramdown
+highlighter:         rouge
+permalink:           none
+gems:                [jekyll-paginate]
