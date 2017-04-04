@@ -133,13 +133,14 @@ blockquote p {
 }
 
 .masthead-title a {
-  font-size: 2rem;
+  font-size: 3rem;
   text-decoration: none;
   color: #505050;
 }
 
 .masthead-subtitle {
   color: #999;
+  margin-bottom: 10rem;
 }
 
 /*
