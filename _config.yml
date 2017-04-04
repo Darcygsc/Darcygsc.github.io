@@ -19,6 +19,8 @@ navigation:
   url: /about
 - title: Writing
   url: /writing
+- title: Subscribe
+  url: /Subscribe
 
 paginate:            5
 disqus:              #"your-disqus"
