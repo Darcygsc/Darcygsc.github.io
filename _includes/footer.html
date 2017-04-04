@@ -1,18 +1,31 @@
 <footer class="footer">
-  {% if site.author.github %}
-    <a href="https://github.com/{{site.author.github}}"><i class="fa fa-github" aria-hidden="true" target="_blank"></i></a>
-  {% endif %}
-  {% if site.author.twitter %}
-    <a href="https://twitter.com/{{site.author.twitter}}"><i class="fa fa-twitter" aria-hidden="true" target="_blank"></i></a>
-  {% endif %}
-  {% if site.author.instagram %}
-    <a href="https://instagram.com/{{site.author.instagram}}"><i class="fa fa-instagram" aria-hidden="true" target="_blank"></i></a>
-  {% endif %}
-  {% if site.author.linkedin %}
-    <a href="https://linkedin.com/in/{{site.author.linkedin}}"><i class="fa fa-linkedin" aria-hidden="true" target="_blank"></i></a>
-  {% endif %}
-  {% if site.author.email %}
-    <a href="mailto:{{site.author.email}}"><i class="fa fa-envelope" aria-hidden="true" target="_blank"></i></a>
-  {% endif %}
+ {% if site.author.github %}
+      <a href="https://github.com/{{ site.author.github }}"><i class="fa fa-github" aria-hidden="true" target="_blank"></i></a>
+    {% endif %}
+    {% if site.author.twitter %}
+      <a href="https://twitter.com/{{ site.author.twitter }}"><i class="fa fa-twitter" aria-hidden="true" target="_blank"></i></a>
+    {% endif %}
+    {% if site.author.instagram %}
+      <a href="https://instagram.com/{{ site.author.instagram }}"><i class="fa fa-instagram" aria-hidden="true" target="_blank"></i></a>
+    {% endif %}
+    {% if site.author.spotify %}
+      <a href="https://open.spotify.com/user/chaosgsc/playlist/3fwDMqi96eZs3vCqgLkzyK"><i class="fa fa-spotify" aria-hidden="true" target="_blank"></i></a>
+    {% endif %}
+    {% if site.author.weixin %}
+      <a href="https://wechat.com"><i class="fa fa-weixin" aria-hidden="true" target="_blank"></i></a>
+    {% endif %}
+    {% if site.author.weibo %}
+      <a href="http://weibo.com/p/1005055593885457"><i class="fa fa-weibo" aria-hidden="true" target="_blank"></i></a>
+    {% endif %}
+    {% if site.author.dribbble %}
+      <a href="http://dribbble.com/{{ site.author.dribbble }}"><i class="fa fa-dribbble" aria-hidden="true" target="_blank"></i></a>
+    {% endif %}
+    {% if site.author.email %}
+      <a href="mailto:{{ site.author.email }}"><i class="fa fa-envelope" aria-hidden="true" target="_blank"></i></a>
+    {% endif %}
+    {% if site.author.rss %}
+      <a href="feed.xml" rel="alternate" type="application/rss+xml"><i class="fa fa-rss" aria-hidden="true" target="_blank"></i></a>
+    {% endif %}
+
   <div class="post-date"><a href="{{ site.github.url }}/menu/about.html">{{ site.title }} | {{ site.tagline }} </a></div>
 </footer>
