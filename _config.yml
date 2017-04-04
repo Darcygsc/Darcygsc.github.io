@@ -1,6 +1,6 @@
 # Site Settings
 title:               Mr Darcy
-name:                Mr Darcy
+name:                "Mr Darcy"
 tagline:             思考、前行
 description:         "The blog of Darcy"
 baseurl:            #"/Lagrange"
