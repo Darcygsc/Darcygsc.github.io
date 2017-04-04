@@ -17,6 +17,7 @@ author:
   spotify:           ""
   weixin:            ""
   weibo:             ""
+  rss:               ""
 navigation:
 - title: About
   url: /about

@@ -463,6 +463,19 @@ pre {
   color: #00AB6C;
 }
 
+.fa-rss {
+  padding: 5px;
+  -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+}
+
+.fa-rss:hover {
+  color: #C82728;
+}
+
 .fa-weibo {
   padding: 5px;
   -o-transition:.5s;
@@ -475,6 +488,8 @@ pre {
 .fa-weibo:hover {
   color: #C82728;
 }
+
+
 
 .fa-codepen {
   padding: 5px;
