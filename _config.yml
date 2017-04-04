@@ -1,9 +1,10 @@
 # Site Settings
 title:               Mr Darcy
+name:                Mr Darcy
 tagline:             思考、前行
-description:
+description:         "The blog of Darcy"
 baseurl:            #"/Lagrange"
-url:                #"https://lenpaul.github.io"
+url:                 "chaosgsc.com"
 github:
   url:               #"https://lenpaul.github.io/Lagrange"
 author:
@@ -18,6 +19,7 @@ author:
   weixin:            ""
   weibo:             ""
   rss:               ""
+  dribbble:          ""
 navigation:
 - title: About
   url: /about
