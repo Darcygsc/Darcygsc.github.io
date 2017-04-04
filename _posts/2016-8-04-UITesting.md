@@ -9,7 +9,7 @@ tags:
     - IOS
 image:
   feature: 
-  teaser: london_night_5-wallpaper-5120x3200.jpg
+  teaser: spools-teaser.jpg
   credit: Death to Stock Photo
   creditlink: ""
 

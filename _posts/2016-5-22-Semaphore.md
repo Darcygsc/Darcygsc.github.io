@@ -9,7 +9,7 @@ tags:
     - IOS
 image:
   feature: 
-  teaser: 03173_goodmorning2013_2880x1800.jpg
+  teaser: bag-teaser.jpg
   credit: Death to Stock Photo
   creditlink: ""
 
