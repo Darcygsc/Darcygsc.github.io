@@ -372,7 +372,7 @@ pre {
 	color: #343434;
 }
 
-.fa-linkedin {
+.fa-telegram {
   padding: 5px;
 	-o-transition:.5s;
   	-ms-transition:.5s;
@@ -381,7 +381,7 @@ pre {
   	transition: .5s;
 }
 
-.fa-linkedin:hover {
+.fa-telegram:hover {
 	color: #0073a4;
 }
 
@@ -424,7 +424,7 @@ pre {
 	color: #bd081c;
 }
 
-.fa-medium {
+.fa-spotify {
   padding: 5px;
 	-o-transition:.5s;
   	-ms-transition:.5s;
@@ -433,8 +433,47 @@ pre {
   	transition: .5s;
 }
 
-.fa-medium:hover {
+.fa-spotify:hover {
 	color: #00AB6C;
+}
+
+.fa-weixin {
+  padding: 5px;
+  -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+}
+
+.fa-weixin:hover {
+  color: #00AB6C;
+}
+
+.fa-medium {
+  padding: 5px;
+  -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+}
+
+.fa-medium:hover {
+  color: #00AB6C;
+}
+
+.fa-weibo {
+  padding: 5px;
+  -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+}
+
+.fa-weibo:hover {
+  color: #00AB6C;
 }
 
 .fa-codepen {
