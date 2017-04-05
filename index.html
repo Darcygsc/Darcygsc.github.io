@@ -5,14 +5,15 @@ title: Home
 
 {% for post in paginator.posts %}
 <div class="posts">
-  <h1>
+  <h4>
     <a href="{{ site.github.url }}{{ post.url }}">{{ post.title }}</a>
-  </h1>
+  </h4>
   {% if post.image.teaser %}
     <a href="{{ site.github.url }}{{ post.url }}"><img src="{{ site.github.url }}/images/{{ post.image.teaser }}"></a>
   {% endif %}
   <p>
-    {{ post.content | strip_html | truncate: 250 }} <a href="{{ site.github.url }}{{ post.url }}">Read more</a>
+    <p>{{ post.content | strip_html | truncate: 250 }}</p>
+    <p><a href="{{ site.github.url }}{{ post.url }}">Read more</a></p>
     <span class="post-date" style="margin-top:3px"><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date_to_string }} - <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</span>
   </p>
 </div>
