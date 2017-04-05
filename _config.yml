@@ -23,8 +23,8 @@ author:
 navigation:
 - title: About
   url: /about
-- title: Writing
-  url: /writing
+- title: Writings
+  url: /writings
 
 paginate:            5
 disqus:              #"your-disqus"
