@@ -34,7 +34,7 @@ self.array = @[@"A",@"B",@"C",@"D"]; //线程B
 ```
 
 *****
-```ruby
+```objc
  if (self.key) {  // 主线程
      [self.dict setObject:@"ops" forKey:self.key];  
  }
@@ -47,7 +47,7 @@ self.array = @[@"A",@"B",@"C",@"D"]; //线程B
 
 #### 属性Setter的问题
 ##### 在MRC时代，系统默认生成的setter像这样：
-```
+```objc
  - (void)setUserName:(NSString *)userName {
      if(_uesrName != userName) {
          [userName retain];
@@ -62,7 +62,7 @@ self.array = @[@"A",@"B",@"C",@"D"]; //线程B
 ##### ARC时代的处理，变得复杂很多了：
 首先看下Objective-C的[底层源码]对Setter的实现：
 
-```
+```objc
  static inline void reallySetProperty(id self, SEL _cmd, id newValue, ptrdiff_t offset, bool atomic, bool copy, bool mutableCopy)
  {
      if (offset == 0) {
@@ -109,7 +109,7 @@ nonatomic的情况比较特殊，在nonatomic判断处理之前。苹果分别�
 苹果在调用objc\_setProperty的示例代码是这样的：
 
 
-```
+```objc
  - (void)setValue:(NSString*)inValue { objc_setProperty(self, _cmd, offsetof(TestDefs, _value), inValue, YES, YES); }
 
  - (void)setObject:(id)inObject { objc_setProperty(self, _cmd, offsetof(TestDefs, _object), inObject, YES, NO); }
@@ -121,7 +121,7 @@ nonatomic的情况比较特殊，在nonatomic判断处理之前。苹果分别�
 
 首先对offset进行判断:
 
-```
+```objc
  if (offset == 0) {
          object_setClass(self, newValue);
          return;
@@ -132,7 +132,7 @@ nonatomic的情况比较特殊，在nonatomic判断处理之前。苹果分别�
 
 TestDefs为结构体:
 
-```
+```objc
 typedef struct {  
      void *isa;
      void *_value;
@@ -160,7 +160,7 @@ C语言函数 offsetof(type, member-designator) 会生成一个类型为 size\_t
 
 发现在循环500W次的情况下，有很小的概率出现crash的问题。这里的原因主要是苹果在reallySetProperty方法里做了一定程度的优化：
 
-```
+```objc
 else {
          // 某些程度的优化
          if (*slot == newValue) return;
