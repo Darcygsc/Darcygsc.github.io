@@ -16,7 +16,7 @@ title: Home
           {% if post.content contains '<!--more-->' %}
             {{ post.content | split:'<!--more-->' | first | strip_html }}
           {% else %}
-            {{ post.content | strip_html | truncatewords: 250 }}
+            {{ post.content | strip_html | truncate: 250 }}
           {% endif %}
     </p>
     <p><a href="{{ site.github.url }}{{ post.url }}">Read more</a></p>
