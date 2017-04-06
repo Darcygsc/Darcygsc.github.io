@@ -14,7 +14,7 @@ title: Home
   <div class="p-summary">
     <p>
           {% if post.content contains '<!--more-->' %}
-          {{ post.content | split:'<!--more-->' | first | strip_html }}
+            {{ post.content | split:'<!--more-->' | first | strip_html }}
           {% else %}
             {{ post.content | strip_html | truncatewords: 250 }}
           {% endif %}
