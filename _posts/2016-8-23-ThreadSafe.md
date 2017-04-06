@@ -26,7 +26,7 @@ image:
 
 在对对象进行赋值的过程中，其实是在更改指针的指向。在多线程环境下，用一个指针指向一个Immutable对象的时候，当指针发生修改时，会出现一些百思不得其解的问题:
 
-```
+```objc
 self.array = @[@"A",@"B",@"C"];  //线程A
 self.array = @[@"A",@"B",@"C",@"D"]; //线程B
 
@@ -34,7 +34,7 @@ self.array = @[@"A",@"B",@"C",@"D"]; //线程B
 ```
 
 *****
-```
+```ruby
  if (self.key) {  // 主线程
      [self.dict setObject:@"ops" forKey:self.key];  
  }
