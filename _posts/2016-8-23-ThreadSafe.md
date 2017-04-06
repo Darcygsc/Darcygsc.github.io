@@ -20,6 +20,9 @@ image:
 ![](http://s2.mogucdn.com/p2/170330/1_3j0d7ib65gd27blbh9a5ig61ejhi4_984x146.png)
 ### Immutable
 那么如果我们操作的是一个Immutable对象呢？ 很多人会觉得不可变对象在线程间传递的是一份只读文件了，那么应该就是线程安全的了。所以在使用NSArray的时候，可能会肆无忌惮，而完全忽视了多线程的环境。
+
+<!--more-->
+
 ![](http://s2.mogucdn.com/p2/170330/1_05a6i8gi198862a0j1ea116k77f7k_410x427.png)
 
 **这里的不可变，仅仅指的是Immutable对象本身。编程过程中，是需要指针指向对象。**

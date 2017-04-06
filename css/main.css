@@ -542,3 +542,42 @@ pre {
 .fa-codepen:hover {
 	color: black;
 }
+
+.fa-user {
+  padding: 5px;
+  -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+}
+
+.fa-user:hover {
+  color: black;
+}
+
+.fa-user {
+  padding: 5px;
+  -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+}
+
+.fa-user:hover {
+  color: black;
+}
+
+.fa-pencil {
+  padding: 5px;
+  -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+}
+
+.fa-pencil:hover {
+  color: black;
+}
