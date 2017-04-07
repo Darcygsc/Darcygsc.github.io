@@ -23,7 +23,7 @@ Clang作为LLVM提供的编译器前端，将用户的源代码(C/C\++/Objective
 ### 自定义插件
 **环境搭建**
 
-```
+```shell
  cd /opt
 
  sudo mkdir llvm
@@ -66,7 +66,7 @@ Clang作为LLVM提供的编译器前端，将用户的源代码(C/C\++/Objective
 
 > 生成插件：
 >
-> ```
+> ```shell 
 >  clang -std=c++11 -stdlib=libc++ -L/opt/local/lib -
 >
 >  L/opt/llvm/llvm_build/lib  
@@ -116,7 +116,7 @@ Clang作为LLVM提供的编译器前端，将用户的源代码(C/C\++/Objective
 **插件使用**
 > 编写测试文件：
 >
-> ```
+> ```objc
 >  #import<UIKit/UIKit.h>
 >
 >  @interface MyViewController : UIViewController
@@ -144,7 +144,7 @@ Clang作为LLVM提供的编译器前端，将用户的源代码(C/C\++/Objective
 
 > 载入插件，编译测试文件：
 >
-> ```
+> ```shell
 >  /opt/llvm/llvm_build/bin/clang -isysroot	/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator10.0.sdk -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 
 >
 >  -mios-version-min=8.0 -Xclang -load -Xclang 		
@@ -160,7 +160,7 @@ Clang作为LLVM提供的编译器前端，将用户的源代码(C/C\++/Objective
 
 > 警告⚠️
 >
-> ```
+> ```c 
 >  DiagnosticsEngine &diagEngine = context->getDiagnostics();
 >
 >  unsigned diagID = diagEngine.getCustomDiagID(DiagnosticsEngine::Warning, "Class name should not start with lowercase letter");
@@ -175,7 +175,7 @@ Clang作为LLVM提供的编译器前端，将用户的源代码(C/C\++/Objective
 
 > 错误❌
 >
-> ```
+> ```c
 >  DiagnosticsEngine &diagEngine = context->getDiagnostics();
 >
 >  unsigned diagID = diagEngine.getCustomDiagID(DiagnosticsEngine::Error, "Class name with _ forbidden");
@@ -207,20 +207,22 @@ Clang作为LLVM提供的编译器前端，将用户的源代码(C/C\++/Objective
 > 
 
 **与Xcode集成**
-> 下载[XcodeHacking]
+ 下载[XcodeHacking](https://github.com/AlexDenisov/ToyClangPlugin/releases/download/0.0.1/XcodeHacking.zip)
 
 
-> 执行命令：
-> '' sudo mv HackedClang.xcplugin `xcode-select -print-path`/../PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library/Xcode/Plug-ins
-> '' sudo mv HackedBuildSystem.xcspec `xcode-select -print-path`/Platforms/iPhoneSimulator.platform/Developer/Library/Xcode/Specifications
+ 执行命令：
+ ``` shell
+  sudo mv HackedClang.xcplugin `xcode-select -print-path`/../PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library/Xcode/Plug-ins
+ sudo mv HackedBuildSystem.xcspec `xcode-select -print-path`/Platforms/iPhoneSimulator.platform/Developer/Library/Xcode/Specifications
+ ```
 
 
-> 选择编译的Clang:
-> ![](http://s2.mogucdn.com/p2/170119/1_70d583eelgj90f02l924j3385b08h_1426x302.png)
+ 选择编译的Clang:
+ ![](http://s2.mogucdn.com/p2/170119/1_70d583eelgj90f02l924j3385b08h_1426x302.png)
 
 
-> OTHER-CFLAGS增加加参数：
-> ![](http://s11.mogucdn.com/p2/170119/1_0601i9fkece91adg3abeh9c0i2fgi_1398x690.png)
+ OTHER-CFLAGS增加加参数：
+ ![](http://s11.mogucdn.com/p2/170119/1_0601i9fkece91adg3abeh9c0i2fgi_1398x690.png)
 
 
 

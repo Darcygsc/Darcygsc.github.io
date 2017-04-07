@@ -103,7 +103,6 @@ self.array = @[@"A",@"B",@"C",@"D"]; //线程B
 > 对象如果是`nonatomic`，所以逻辑会走到上述注释危险区处。还是设想一下多线程对一个属性同时设置的情况，我们首先在线程A处获取到了执行第一步代码后的`oldValue`，然后此时线程切换到了B，B也获得了第一步后的`oldValue`，所以此时就有两处持有`oldValue`。然后无论是线程A或者线程B执行到最后都会执行objc\_release(oldValue)。程序走到这里就会crash了。
 
 
-**nonatomic**
 nonatomic的情况比较特殊，在nonatomic判断处理之前。苹果分别针对 offset、copy、mutableCopy 做了判断。
 
 苹果在调用objc\_setProperty的示例代码是这样的：
