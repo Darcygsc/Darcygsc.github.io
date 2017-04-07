@@ -4,7 +4,7 @@ name:                "Mr Darcy"
 tagline:             思考、前行
 description:         "The blog of Darcy"
 baseurl:            #"/Lagrange"
-url:                 "chaosgsc.com"
+url:                 "http://chaosgsc.com"
 github:
   url:               #"https://lenpaul.github.io/Lagrange"
 author:
