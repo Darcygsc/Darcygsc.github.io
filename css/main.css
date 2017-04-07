@@ -302,20 +302,10 @@ body {
 
 pre,
 code {
-    f/*ont-size: 0.8rem;
+    font-size: 0.8rem;
     border-radius: 3px;
     background-color: #f5f5f5;
-    font-family: "Source Code Pro";*/
-    padding: .4em;
-    padding-top: .2em;
-    padding-bottom: .1em;
-    background: #e8f2fb;
-    border: 1px solid #c9e1f6;
-    border-radius: 3px;
-    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
-    font-size: .9em;
-    vertical-align: middle;
-    word-wrap: break-word;
+    font-family: "Source Code Pro";
 }
 
 code {
