@@ -1,5 +1,6 @@
 <head>
 
+  <meta name="baidu-site-verification" content="vgSc23kMBM" />
   <title>
     {% if page.title == "Home" %}
       {{ site.title }} | {{ site.tagline }}
@@ -22,9 +23,5 @@
   </script>
 
   {% include google_analytics.html %}
-
-  {% if site.google_analytics and jekyll.environment == 'production' %}
-  {% include analytics.html %}
-  {% endif %}
 
 </head>
