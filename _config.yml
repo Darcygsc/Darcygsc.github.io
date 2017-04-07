@@ -25,6 +25,8 @@ navigation:
   url: /about
 - title: Writings
   url: /writings
+- title: Books
+  url: /books
 
 paginate:            5
 disqus:              #"your-disqus"
