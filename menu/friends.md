@@ -17,6 +17,9 @@ title: Friends
     <li itemscope>
       <p><a href="http://www.saitjr.com/">蓉神</a></p> 
     </li>
+    <li itemscope>
+      <p><a href="https://xiaolei.tech/">xiaolei</a></p> 
+    </li>
 
 </ul>
 
