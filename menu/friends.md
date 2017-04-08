@@ -3,6 +3,12 @@ layout: page
 title: Friends
 ---
 
+<div class="page">
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/Aotm6CQImJQ?autoplay=1&start=3" frameborder="0" allowfullscreen></iframe>
+
+</div>
+
 <ul class="posts">
 
     <li itemscope>
@@ -14,8 +20,3 @@ title: Friends
 
 </ul>
 
-<div class="page">
-
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/Ie_Za5PkHAU?autoplay=1&start=3" frameborder="0" allowfullscreen></iframe>
-
-</div>
