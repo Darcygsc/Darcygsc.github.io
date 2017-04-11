@@ -12,5 +12,5 @@ Who cares?
 
 <div class="page">
 
-  <iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Achaosgsc%3Aplaylist%3A3fwDMqi96eZs3vCqgLkzyK" width="500" height="380" frameborder="0" allowtransparency="true"></iframe>
+  <iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Achaosgsc%3Aplaylist%3A3fwDMqi96eZs3vCqgLkzyK" width="560" height="380" frameborder="0" allowtransparency="true"></iframe>
 </div>
