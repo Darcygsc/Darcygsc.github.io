@@ -6,7 +6,7 @@ date:       2017-04-23
 author:     "Darcy"
 header-img: ""
 tags:
-	- Pattern
+- Pattern
 image:
   feature: 
   teaser: playing.jpg
