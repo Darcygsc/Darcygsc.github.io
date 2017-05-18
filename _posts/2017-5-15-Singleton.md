@@ -20,23 +20,21 @@ image:
 
 - 利用一个静态变量来记录 `Singleton` 类的唯一实例。
 
-```
+```java
 private static Singleton uniqueInstace;
-
 ```
 
 - 把构造方法声明为私有的，只有 `Singleton` 类内部才可以访问。
 
-```
+```java
 private Singleton(){}
-
 ```
 
 - 用 `sharedInstance` 方法实例化对象，并返回这个实例。
 
 <!--more-->
 
-```
+```java
 public static Singleton getInstance(){
   if (uniqueInstace == null){
   	uniqueInstace = new Singleton();
@@ -51,7 +49,7 @@ public static Singleton getInstance(){
 
 只要把 `getInstance()` 变成同步 (`synchronized`) 方法，多线程问题就可以迎刃而解了。
 
-```
+```java
 public static synchronized Singleton getInstance(){
   if (uniqueInstace == null){
   	uniqueInstace = new Singleton();
@@ -64,7 +62,7 @@ public static synchronized Singleton getInstance(){
 
 - 饿汉式
 
-```
+```java
 public class Singleton{
     private static final Singleton instance = new Singleton();
     private Singleton(){}
@@ -78,7 +76,7 @@ public class Singleton{
 
 - 双重检查加锁
 
-```
+```java
 public static Singleton getSingleton() {
     if (instance == null) {                         
         synchronized (Singleton.class) {
@@ -93,15 +91,17 @@ public static Singleton getSingleton() {
 
 看起来好像完美了，但是它还有问题。` instance = new Singleton();` 并不是一个原子操作，`JVM` 中这段代码大概做了下面 3 件事情：
 
-1.给 instance 分配内存
-2.调用 Singleton 的构造函数来初始化成员变量
-3.将instance对象指向分配的内存空间（执行完这步 instance 就为非 null 了）
+1.给 `instance` 分配内存
+
+2.调用 `Singleton` 的构造函数来初始化成员变量
+
+3.将 `instance` 对象指向分配的内存空间（执行完这步 `instance` 就为非 `null` 了）
 
 `JVM` 的即时编译器中存在指令重排序的优化，2和3的执行顺序是不能确定的。如果 3 执行完毕、2 未执行之前，被另一个线程抢占了，那么就会返回一个为初始化的 `instance`。
 
 - `volatile` 关键字
 
-```
+```java
 public class Singleton {
     private volatile static Singleton instance; 
     private Singleton (){}
@@ -122,7 +122,7 @@ public class Singleton {
 
 - 静态内部类
 
-```
+```java
 public class Singleton {  
     private static class SingletonHolder {  
         private static final Singleton INSTANCE = new Singleton();  
@@ -139,7 +139,7 @@ public class Singleton {
 
 苹果官方的 `Simple Code` 的实现像这样：
 
-```
+```objective-c
 static MyGizmoClass *sharedGizmoManager = nil; 
 + (MyGizmoClass*)sharedManager
 {
@@ -192,7 +192,7 @@ static MyGizmoClass *sharedGizmoManager = nil;
 
 `Objective－C` 中没有绝对的私有方法，可以使用 `NS_UNAVAILABLE` 将一些方法设置为不可用。
 
-```
+```objective-c
 - (instancetype)init NS_UNAVAILABLE;
 
 + (instancetype)new NS_UNAVAILABLE;
@@ -203,7 +203,7 @@ static MyGizmoClass *sharedGizmoManager = nil;
 #### dispatch_once
 
 在 `ARC` 时代，更多的是使用苹果官方推出的 `GCD` 来完成单例模式：
-```
+```objective-c
 + (Singleton *)sharedInstance{
     static Singleton *instance = nil;
     static dispatch_once_t onceToken;
@@ -215,3 +215,5 @@ static MyGizmoClass *sharedGizmoManager = nil;
 ```
 
 `dispatch_once` 函数有两个参数，第一个参数 `predicate` 用来保证执行一次，第二个参数是要执行一次的任务 `block`。`dispatch_once` 函数已经为我们处理好了多线程的安全问题。
+
+很多时候很多人默认都不会为 `onceToken` 赋值，那么如果为 `onceToken` 初始化0或1，结果会发生什么呢？
