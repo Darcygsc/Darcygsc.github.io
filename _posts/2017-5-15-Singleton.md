@@ -34,6 +34,8 @@ private Singleton(){}
 
 - 用 `sharedInstance` 方法实例化对象，并返回这个实例。
 
+<!--more-->
+
 ```
 public static Singleton getInstance(){
   if (uniqueInstace == null){
