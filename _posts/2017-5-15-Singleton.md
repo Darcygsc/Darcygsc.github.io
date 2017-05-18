@@ -9,7 +9,7 @@ tags:
 - Pattern
 image:
   feature: 
-  teaser: playing.jpg
+  teaser: trees.jpg
   credit: Death to Stock Photo
   creditlink: ""
 ---
