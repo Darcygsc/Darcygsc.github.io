@@ -9,7 +9,7 @@ tags:
 - Pattern
 image:
   feature: 
-  teaser: work.jpg
+  teaser: walk.jpg
   credit: Death to Stock Photo
   creditlink: ""
 ---
